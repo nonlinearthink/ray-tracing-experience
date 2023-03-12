@@ -13,7 +13,7 @@ fn ray_color(ray: Ray) -> Vector3<f64> {
     return (1. - t) * Vector3::<f64>::new(1., 1., 1.) + t * Vector3::<f64>::new(0.5, 0.7, 1.);
 }
 
-fn generate_image() {
+fn render() {
     let aspect_ratio = 16. / 9.;
     let width = 400;
     let height = (width as f64 / aspect_ratio) as u32;
@@ -44,5 +44,5 @@ fn generate_image() {
 }
 
 fn main() {
-    generate_image();
+    render();
 }
